@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
-
 * {
   box-sizing: border-box;
 }
@@ -10,7 +9,6 @@ body {
   font-size: 16px;
   line-height: 1.4;
   overflow: hidden;
-  
 }
 main {
   display: flex;
@@ -18,21 +16,16 @@ main {
   width: 100%;
   transform: translate3d(0, 0, 0);
 }
-@media (min-width: 630px) {
+@media (min-width: 960px) {
   main {
     flex-direction: row;
     width: 119%;
     margin-left: -9%;
  }
 }
-
-
-
 main section:hover {
   flex: 3;
 }
-
- 
 main section:hover:after {
   background: rgba(139, 128, 53, 0.5)
 }
@@ -45,16 +38,12 @@ main section:nth-child(2):hover:after {
 main section:nth-child(3):hover:after {
   background: rgba(183, 97, 56, 0.5);
 } 
-@media (min-width: 630px) {
-  main section:hover article {
-     
+@media (min-width: 960px) {
+  main section:hover article {  
  }
 }
-
- 
 section {
   flex: 1;
- 
   position: relative;
   width: 100%;
   min-height: 20vh;
@@ -82,7 +71,7 @@ section:after {
   background: rgba(2, 105, 187, 0.5);
   transition: opacity 0.5s;
 }
-@media (min-width: 630px) {
+@media (min-width: 960px) {
   section {
     padding: 0 50px;
     height: 100vh;
@@ -90,7 +79,7 @@ section:after {
     transform: skewX(345deg) translateZ(0);
  }
   section:before {
-    left: -28%;
+    left: -25%;
     width: 150%;
     transform: skewX(15deg);
  }
@@ -104,11 +93,6 @@ section:nth-child(2):before {
 section:nth-child(3):before {
   background-image: url('../img/banner-3.jpg');
 }
- 
-
-
-
- 
 article {
   position: relative;
   padding: 24px;
@@ -119,9 +103,7 @@ article {
   z-index: 1;
   padding: 24px 300px;
 }
-
-
-@media(min-width: 630px) {
+@media(min-width: 960px) {
   article {
     display: flex;
     flex-direction: column;
@@ -131,37 +113,30 @@ article {
     top: 0;
     right: 0;
     left: 0;
-    margin: auto;
-    
+    margin: auto; 
     transform:   skewX(15deg);
  }
 }
-    
-
 h2 {
   font-size: 32px;
   margin-bottom: 12px;
 }
- 
 .inner-box {
   position: relative;
  
 }
-
 .inner-box img,
 .inner-box p.subtitle,
 .inner-box a {
   opacity: 0;
   transition: opacity 0.5s ease-out;
 }
-
 main section:hover .inner-box img,
 main section:hover .inner-box p.subtitle,
 main section:hover .inner-box a {
    opacity: 1;
   transition: opacity 0.5s ease-out;
 }
-
 .inner-box p {
   font-family: Roboto;
   font-style: normal;
@@ -170,7 +145,6 @@ main section:hover .inner-box a {
   letter-spacing: 0.02em;
   color: #FFFFFF;
 }
-
 .inner-box p.subtitle {
   font-family: Roboto;
   font-weight: normal;
@@ -179,9 +153,7 @@ main section:hover .inner-box a {
   padding-bottom: 30px;
   min-width:475px
 }
-
 .inner-box a {
- 
   font-family: Roboto;
   font-weight: normal;
   font-size: 24px;
@@ -191,7 +163,6 @@ main section:hover .inner-box a {
   border-radius: 15px;
   padding: 10px 55px;
 }
-
 .inner-box a:hover {
   background: #315674;
 }
@@ -201,27 +172,24 @@ main section:hover .inner-box a {
 }
 section:nth-child(1) article {
   align-items: end;
-  margin-right: 70px;
+  margin-right: 120px;
 }
 section:nth-child(3) article {
   align-items: flex-end;
   margin-left: 67px;
 }
-
-
-section:nth-child(1).active article,
-section:nth-child(3).active article{
+section:nth-child(1).active article{
   align-items: center;
   margin-right: 0;
 }
-
- 
-section:nth-child(3).hidden article{
-  align-items: center;
-  margin-left: -35px;
+section:nth-child(1).active article {
+  margin-left: 40px;
 }
 
-
+section:nth-child(3).active article{
+  align-items: center;
+  margin-left: -106px;
+}
 section:nth-child(1).hidden article{
   align-items: end;
   margin-right: -5px;
@@ -229,4 +197,40 @@ section:nth-child(1).hidden article{
 section:nth-child(2).hidden article{
   margin-left: 58px;
 }
+section:nth-child(3).hidden article{
+  align-items: center;
+  margin-left: -38px;
+}
 
+@media (max-width: 1600px) {
+  .inner-box p.title {
+  
+    font-size: 38px;
+ 
+}
+}
+
+@media (max-width: 1200px) {
+  .inner-box p.title {
+    max-width: 208px;
+    word-wrap: break-word;
+  }
+
+
+  section:nth-child(3) article {
+    align-items: center;
+    margin-left: -10px;
+}
+
+
+section:nth-child(1) article {
+  align-items: end;
+  margin-right: -40px;
+}
+
+section:nth-child(2) article {
+  align-items: end;
+  margin-right: 10px;
+}
+ 
+}
